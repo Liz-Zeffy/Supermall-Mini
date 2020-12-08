@@ -1,0 +1,8 @@
+/* pages/home/childComps/z-feature/z-feature.wxss */
+.feature image{
+  width:100%;
+}
+
+.feature {
+  border-bottom: 8px solid #eee;
+}

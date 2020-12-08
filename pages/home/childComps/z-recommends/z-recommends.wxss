@@ -1,0 +1,17 @@
+/* pages/home/childComps/z-recommends/z-recommends.wxss */
+.recommends {
+  display:flex;
+  justify-content:space-around;
+  text-align: center;
+  padding:26rpx;
+  border-bottom: 8px solid #eee;
+}
+
+.recommends-item image {
+  width:144rpx;
+  height:144rpx;
+}
+.item-text {
+  font-weight:200;
+  font-size:26rpx;
+}

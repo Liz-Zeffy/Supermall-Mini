@@ -1,0 +1,7 @@
+/* components/z-tabcontrol/z-tabcontrol.wxss */
+.tabcontrol {
+  display:flex;
+  justify-content:space-around;
+  align-items:center;
+  height:86rpx;
+}

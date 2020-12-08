@@ -1,0 +1,5 @@
+/* pages/home/home.wxss */
+z-banner, z-feature {
+  width:100vw;
+}
+

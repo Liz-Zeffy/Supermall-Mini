@@ -1,0 +1,4 @@
+<!--pages/home/childComps/z-feature/z-feature.wxml-->
+<view class="feature">
+  <image src="/assets/img/home/recommend_bg.jpg" mode="widthFix"/>
+</view>

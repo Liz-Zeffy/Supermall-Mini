@@ -1,0 +1,6 @@
+<!--components/z-tabcontrol/z-tabcontrol.wxml-->
+<view class="tabcontrol">
+  <block wx:for="{{title}}" wx:key="item">
+    <text>{{item}}</text>
+  </block>
+</view>
