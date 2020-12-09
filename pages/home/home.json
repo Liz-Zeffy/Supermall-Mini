@@ -5,6 +5,7 @@
     "z-banner":"../../components/z-banner/z-banner",
     "z-recommends":"./childComps/z-recommends/z-recommends",
     "z-feature":"./childComps/z-feature/z-feature",
-    "z-tabcontrol":"../../components/z-tabcontrol/z-tabcontrol"
+    "z-tabcontrol":"../../components/z-tabcontrol/z-tabcontrol",
+    "z-goods":"../../components/z-goods/z-goods"
   }
 }

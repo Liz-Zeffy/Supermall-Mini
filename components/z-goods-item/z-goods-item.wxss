@@ -1,0 +1,41 @@
+/* components/z-goods-item/z-goods-item.wxss */
+.goods-item {
+  width:48%;
+}
+.goods-item > image {
+  width:100%;
+  border-radius: 10rpx;
+}
+
+.desc-info {
+  position: absolute;
+  bottom:-80rpx;
+}
+.desc-info {
+  width:100%;
+  text-align: center; 
+  font-size:26rpx;
+
+}
+
+.desc-info .title{
+  display:block;
+  text-overflow: ellipsis;
+  white-space: nowrap; 
+  overflow: hidden;
+}
+
+
+.info .icon {
+  width:30rpx;
+  height:30rpx;
+  position: relative;
+  top:6rpx;
+  margin-left:16rpx;
+}
+.info .price {
+  color:#ff5777;
+}
+
+
+

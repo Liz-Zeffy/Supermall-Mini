@@ -6,3 +6,13 @@ export function getHomeMultidata() {
   })
 }
 
+export function getHoemDetail(type,page) {
+  return request({
+    url:'/home/data',
+    data:{
+      type,
+      page
+    }
+  })
+}
+

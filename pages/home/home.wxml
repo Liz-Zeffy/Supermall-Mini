@@ -2,4 +2,5 @@
 <z-banner list="{{banners}}"></z-banner>
 <z-recommends recommends="{{recommends}}"></z-recommends>
 <z-feature/>
-<z-tabcontrol title="{{title}}"/>
+<z-tabcontrol title="{{title}}" bind:titleclick="titleClick"/>
+<z-goods goodslist="{{goods[currentType].list}}"/>

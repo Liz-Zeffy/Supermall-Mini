@@ -3,5 +3,17 @@
   display:flex;
   justify-content:space-around;
   align-items:center;
-  height:86rpx;
+  height:100rpx;
+  font-size:32rpx;
+}
+
+.tabcontrol-item text{
+  padding:8rpx 12rpx
+}
+
+
+
+.tabcontrol-item.active text{
+  border-bottom:2px solid #ff5777;
+  color:#fd5b79
 }

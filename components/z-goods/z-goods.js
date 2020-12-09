@@ -1,10 +1,10 @@
-// pages/home/childComps/z-recommends/z-recommends.js
+// components/z-goods/z-goods.js
 Component({
   /**
    * 组件的属性列表
    */
   properties: {
-    recommends:{
+    goodslist:{
       type:Array,
       value:[]
     }
