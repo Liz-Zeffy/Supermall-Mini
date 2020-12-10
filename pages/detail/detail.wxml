@@ -1,0 +1,3 @@
+<!--pages/detail/detail.wxml-->
+<z-banner class="d-swiper" list="{{topimages}}"/>
+

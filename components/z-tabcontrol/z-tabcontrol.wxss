@@ -5,6 +5,7 @@
   align-items:center;
   height:100rpx;
   font-size:32rpx;
+  background:#fff;
 }
 
 .tabcontrol-item text{
@@ -17,3 +18,4 @@
   border-bottom:2px solid #ff5777;
   color:#fd5b79
 }
+

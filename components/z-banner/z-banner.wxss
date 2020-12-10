@@ -1,5 +1,5 @@
 /* components/banner/banner.wxss */
-.swiper,.swiper-item  {
+.swiper {
   width:100vw;
   height:390rpx
 }

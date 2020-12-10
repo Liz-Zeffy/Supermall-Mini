@@ -1,6 +1,6 @@
 <!--components/z-goods-item/z-goods-item.wxml-->
-<z-goods-item class="goods-item">
-  <image src="{{goodsitem.show.img}}" alt=""  mode="widthFix"/>
+<z-goods-item class="goods-item" bind:tap="goodsItemClick">
+  <image src="{{goodsitem.show.img}}" alt=""  mode="widthFix" lazy-load/>
   <view class="desc-info">
     <text class="title">{{goodsitem.title}}</text>
     <view class="info">
@@ -9,5 +9,4 @@
       <text class="cfav">{{goodsitem.cfav}}</text>
     </view>
   </view>
-
 </z-goods-item>

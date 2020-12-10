@@ -6,6 +6,7 @@
     "z-recommends":"./childComps/z-recommends/z-recommends",
     "z-feature":"./childComps/z-feature/z-feature",
     "z-tabcontrol":"../../components/z-tabcontrol/z-tabcontrol",
-    "z-goods":"../../components/z-goods/z-goods"
+    "z-goods":"../../components/z-goods/z-goods",
+    "z-back-top":"../../components/z-back-top/z-back-top"
   }
 }

@@ -1,6 +1,6 @@
 // pages/home/home.js
 import {getHomeMultidata, getHoemDetail} from "../../network/home"
-
+const TOP_DISTENCE = 1000
 Page({
   data:{
     banners:'',
@@ -12,9 +12,12 @@ Page({
       'sell':{page:0, list:[]}
     },
     currentType: 'pop',
+    showBackTop:false,
+    isTabFixed:false,
+    tabcontrolTop:0
   },
 
-   // 生命周期函数--监听页面加:
+   // 生命周期函数--监听页面加载:
   onLoad: function (options) {
     this. _getHomeMultidata();
     this. _getHoemDetail('pop');
@@ -24,8 +27,9 @@ Page({
   //-----------------以下是网络请求相关----------------------
   _getHomeMultidata(){
     getHomeMultidata().then(res => {
-      console.log(res);
-      const banners = res.data.data.banner.list;
+      const banners = res.data.data.banner.list.map(item => {
+        return item.image
+      });
       const recommends = res.data.data.recommend.list;
       this.setData({
         banners:banners,
@@ -40,7 +44,7 @@ Page({
       const list = res.data.data.list;
       const goods = this.data.goods;
       goods[type].page += 1;
-      goods[type].list = list;
+      goods[type].list.push(...list);
 
       this.setData({
         goods
@@ -54,5 +58,52 @@ Page({
     this.setData({
       currentType:title[e.detail.currentIndex]
     })
-  }  
+  },
+
+  handleImageLoad(){
+    wx.createSelectorQuery().select('#tabcontrol').boundingClientRect(rect => {
+      this.data.tabcontrolTop = rect.top;
+    }).exec()
+  },
+
+
+  //--------------------------------------------
+  onReachBottom() {
+    this._getHoemDetail(this.data.currentType);
+  },
+
+
+  onPageScroll(option){
+    const scrollTop = option.scrollTop;
+
+    const flag1 = scrollTop >= TOP_DISTENCE;
+    if (flag1 != this.data.showBackTop) {
+      this.setData({
+        showBackTop:flag1
+      })
+    }
+ 
+    const flag2 = scrollTop >= this.data.tabcontrolTop;
+    if(flag2 != this.data.isTabFixed) {
+      this.setData({
+        isTabFixed:flag2
+      })
+    }
+
+  }
+
+
+
+
+
 })
+
+
+
+
+
+
+
+
+
+

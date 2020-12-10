@@ -1,0 +1,5 @@
+/* pages/detail/detail.wxss */
+.d-swiper swiper{
+  /* width:100vw; */
+  height:700rpx;
+}

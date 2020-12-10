@@ -1,6 +1,16 @@
 /* pages/home/home.wxss */
+z-banner {
+  width:100vw;
+  height:390rpx
+}
 z-banner, z-feature {
   width:100vw;
 }
-
+.fixed {
+  position:fixed;
+  left:0;
+  right:0;
+  top:0;
+  z-index:100;
+}
 

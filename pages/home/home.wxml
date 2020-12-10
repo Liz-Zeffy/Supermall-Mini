@@ -1,6 +1,8 @@
 <!--pages/home/home.wxml-->
-<z-banner list="{{banners}}"></z-banner>
-<z-recommends recommends="{{recommends}}"></z-recommends>
+<z-banner list="{{banners}}" />
+<z-recommends recommends="{{recommends}}" bind:imageLoaded="handleImageLoad"/>
 <z-feature/>
-<z-tabcontrol title="{{title}}" bind:titleclick="titleClick"/>
+<z-tabcontrol id="tabcontrol" title="{{title}}" bind:titleclick="titleClick" class="{{isTabFixed ? 'fixed' : ''}}"/>
+<z-tabcontrol title="{{title}}" wx:if="{{isTabFixed}}"/>
 <z-goods goodslist="{{goods[currentType].list}}"/>
+<z-back-top wx:if="{{showBackTop}}"/>

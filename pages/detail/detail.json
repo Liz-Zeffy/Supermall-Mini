@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "z-banner":"../../components/z-banner/z-banner"
+  }
+}
