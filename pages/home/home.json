@@ -1,6 +1,6 @@
 {
   
-  "navigationBarTitleText": "蘑菇街",
+  "navigationBarTitleText": "卖蘑菇的街",
   "usingComponents": {
     "z-banner":"../../components/z-banner/z-banner",
     "z-recommends":"./childComps/z-recommends/z-recommends",

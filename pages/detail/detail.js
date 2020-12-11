@@ -1,4 +1,6 @@
-import {getDetail} from "../../network/detail"
+import {getDetail,
+        GoodBaseInfo,
+        GoodShopInfo} from "../../network/detail"
 
 // pages/detail/detail.js
 Page({
@@ -8,7 +10,10 @@ Page({
    */
   data: {
     iid:'',
-    topimages:''
+    topImages:'',
+    baseInfo:{},
+    shopInfo:{},
+    
   },
 
   /**
@@ -16,7 +21,6 @@ Page({
    */
   onLoad: function (options) {
     this.data.iid = options.iid;
-
     this._getDetail()
   
   },
@@ -24,10 +28,20 @@ Page({
   _getDetail(){
     getDetail(this.data.iid).then (res => {
       const data = res.data.result;
-      console.log(data)
+      console.log(data);
+  
+      const baseInfo = new GoodBaseInfo (data.columns,data.itemInfo,data.shopInfo);
+            const lastcolumns = baseInfo.services.pop().name;     
+            baseInfo.columns.splice(-1);
+            baseInfo.columns.push(lastcolumns);
+
+      const shopInfo = new GoodShopInfo (data.shopInfo);
+            
       this.setData({
-        topimages:data.itemInfo.topImages
-      })
+        topImages:data.itemInfo.topImages,
+        baseInfo:baseInfo,
+        shopInfo:shopInfo
+      });
     })
   }
  

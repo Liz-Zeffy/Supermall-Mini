@@ -1,0 +1,29 @@
+<!--pages/detail/childComps/z-shop-info/z-shop-info.wxml-->
+<view class="shop">
+  <image src="{{shopInfo.logoURL}}" alt="" mode="widthFix" />
+  <text>{{shopInfo.name}}</text>
+</view>
+<view class="desc_info">
+  <view class="sellInfo">
+    <view class="cgoods">
+      <text>{{shopInfo.cGoods}}</text>
+      <text>总销量</text>
+    </view>
+    <view class="cSells">
+      <text>{{shopInfo.cSells}}</text>
+      <text>全部宝贝</text>
+    </view>
+  </view>
+  <view class="scoreInfo">
+    <block wx:for="{{shopInfo.score}}">
+      <view class="scoreItem">
+        <text>{{item.name}}</text>
+        <text>{{item.score}}</text>
+        <text style="background:{{item.isBetter ? 'green' : 'red'}}">{{item.isBetter ? "高" : "低"}}</text>
+      </view>
+    </block>
+  </view>
+</view>
+<view class="come">
+  <text>进店逛逛</text>
+</view>

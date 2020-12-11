@@ -1,0 +1,28 @@
+/* pages/detail/childComps/z-shop-info/z-shop-info.wxss */
+.shop {
+  display: flex;
+  align-items: center;
+  margin: 30rpx 20rpx;
+}
+.shop image {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  border: 1rpx solid #ddd;
+}
+
+.shop > text {
+  font-size: 30rpx;
+  margin: 0 6rpx;
+}
+
+.desc_info {
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  margin:30rpx 20rpx;
+}
+
+.desc_info .sellInfo {
+
+}

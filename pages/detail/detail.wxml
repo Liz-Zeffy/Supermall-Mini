@@ -1,3 +1,9 @@
 <!--pages/detail/detail.wxml-->
-<z-banner class="d-swiper" list="{{topimages}}"/>
+<z-banner class="d-swiper" list="{{topImages}}"/>
+<z-base-info baseInfo="{{baseInfo}}"/>
+<z-shop-info shopInfo="{{shopInfo}}"/>
+
+
+
+
 

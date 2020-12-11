@@ -1,0 +1,22 @@
+<!--pages/detail/childComps/z-base-info/z-base-info.wxml-->
+<view class="title">
+  <text>{{baseInfo.title}}</text>
+</view>
+<view class="price">
+  <text class="newPrice">{{baseInfo.price}}</text>
+  <text class="oldPrice">{{baseInfo.oldPrice}}</text>
+  <text wx:if="{{baseInfo.discount[0] != ''}}" class="discount" style="background:{{baseInfo.discount[1]}}">{{baseInfo.discount[0]}}</text>
+</view>
+<view class="columns">
+  <block wx:for="{{baseInfo.columns}}" wx:key="item">
+    <text>{{item}}</text>
+  </block>
+</view>
+<view class="services">
+  <block wx:for="{{baseInfo.services}}" wx:key="item">
+    <view class="servicesItem">    
+      <image wx:if="{{item.icon}}" src="{{item.icon}}" alt="" mode="widthFix"/>
+      <text>{{item.name}}</text>
+    </view>
+  </block>
+</view>

@@ -58,7 +58,14 @@
       "list": []
     },
     "miniprogram": {
-      "list": []
+      "list": [
+        {
+          "name": "pages/detail/detail",
+          "pathName": "pages/detail/detail",
+          "query": "idd= 1m745k0",
+          "scene": null
+        }
+      ]
     }
   }
 }

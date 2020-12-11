@@ -1,0 +1,62 @@
+/* pages/detail/childComps/z-base-info/z-base-info.wxss */
+.title {
+  margin: 15rpx 20rpx;
+  font-size: 36rpx;
+  font-weight: 600;
+  color: #555;
+  text-align: justify;
+}
+
+.price {
+  margin: 15rpx 20rpx;
+
+}
+
+.price .newPrice {
+  color: #ff5777;
+  font-size: 46rpx;
+}
+.price .oldPrice {
+  text-decoration: line-through;
+  color: #666;
+  font-size: 28rpx;
+  margin: 0 12rpx;
+}
+
+.price .discount {
+  font-size: 22rpx;
+  color: #fff;
+  padding: 4rpx 6rpx;
+  border-radius: 10rpx;
+  position: relative;
+  bottom: 14rpx;
+}
+
+.columns {
+  display: flex;
+  justify-content: space-between;
+  padding: 6rpx 20rpx;
+  color: #999;
+  font-size: 28rpx;
+  border-bottom: 3rpx solid #ddd;
+}
+
+.services {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 9rpx solid #ddd;
+  padding: 26rpx 20rpx;
+
+}
+.servicesItem {
+  font-size: 28rpx;
+  color: #666;
+  font-weight: 600;
+}
+
+.servicesItem > image {
+  width:30rpx;
+  height:30rpx;
+  position: relative;
+  top:4rpx
+}
