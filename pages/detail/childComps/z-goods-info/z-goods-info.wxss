@@ -1,0 +1,56 @@
+/* pages/detail/childComps/z-goods-info/z-goods-info.wxss */
+.top {
+  padding: 40rpx 20rpx;
+}
+.top .start{
+    width: 90px;
+    height: 1px;
+    background-color: #a3a3a5;
+    position: relative;
+}
+
+.top .start::before {
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background-color: #333;
+  bottom: 0;
+}
+.top .end {
+  width: 5px;
+  height: 5px;
+  background-color: #333;
+  position: absolute;
+  right:20rpx
+}
+
+.top .end::before{
+  content: '';
+  position: absolute;
+  width: 90px;
+  height: 1px;
+  background-color: #a3a3a5;
+  bottom: 0;
+  right:0
+}
+
+.topInfo {
+  margin: 30rpx 0;
+  text-align: justify;
+  font-size: 30rpx;
+}
+
+.desc_info {
+  margin:0 20rpx;
+  border:1px red solid ;
+}
+
+.imgs{
+  width:100%;
+  margin-right: 20rpx;
+}
+
+.imgs_info{
+  width:100%;
+}

@@ -1,0 +1,16 @@
+<!--pages/detail/childComps/z-goods-info/z-goods-info.wxml-->
+<view class="top">
+  <view class="start"></view>
+  <view class="topInfo"><text>{{goodsInfo.desc}}</text></view>
+  <view class="end"></view>
+</view>
+<block wx:for="{{goodsInfo.detailImage}}" wx:key="item">
+  <view class="desc_info">
+    <view class="title"><text>{{item.key}}</text></view>
+    <view class="imgs">
+      <bolck wx:for="{{item.list}}" wx:for-item="imageURL" wx:key="imageURL">
+        <image class="imgs_info" src="{{imageURL}}" alt="" mode="widthFix" />
+      </bolck>
+    </view>
+  </view>
+</block>

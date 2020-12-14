@@ -1,0 +1,33 @@
+<!--pages/detail/childComps/z-comment/z-comment.wxml-->
+<wxs src="../../../../utils/util.wxs" module="format"/>
+
+<view class="head"><text class="title">用户评价</text><text class="more">更多>></text></view>
+<view wx:if="{{commentInfo.cRate >= 1}}">
+  <view class="tip">
+    <view class="user">
+      <image src="{{commentInfo.list[0].user.avatar}}" alt="" mode="widthFix"/>
+      <text class="name">{{commentInfo.list[0].user.uname}}</text>
+    </view>
+    <text class="comstyle">{{commentInfo.list[0].style}}</text>
+  </view>
+  <view class="contentBox">
+    <view>
+      <block wx:for="{{commentInfo.list[0].extraInfo}}" wx:key="item">
+        <text>{{item}}</text>
+      </block>
+    </view>
+    <view class="content">
+      <text>{{commentInfo.list[0].content}}</text>
+    </view>
+    <view wx:if="{{commentInfo.list[0].explain}}" class="explain">
+      <text>{{commentInfo.list[0].explain}}</text>
+    </view>
+  </view>
+  <view class="timer">
+    <text>{{format.format(commentInfo.list[0].created * 1000,'YY-MM-DD')}}</text>
+  </view>
+</view>
+<view wx:else class="none">
+  <image src="/assets/img/detail/comment.png" mode="widthFix"/>
+  <text>当前还没有用户评价哦~</text>
+</view>

@@ -1,0 +1,80 @@
+/* pages/detail/childComps/z-comment/z-comment.wxss */
+.head {
+  display: flex;
+  justify-content: space-between;
+  margin: 20rpx;
+}
+.head .title {
+  font-size: 34rpx;
+} 
+.head .more {
+  font-size: 30rpx;
+  color: #ff5777;
+} 
+.tip {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin:20rpx;
+}
+.user {
+  display: flex;
+  align-items: center;
+}
+
+.user > image {
+  width:80rpx;
+  border-radius: 50%;
+  border: 1rpx solid #eee;
+  margin-right: 20rpx;
+}
+.user .name {
+  font-size: 32rpx;
+}
+.comstyle {
+  font-size: 30rpx;
+  color: #aaa;
+}
+
+.contentBox {
+  font-size: 30rpx;
+  margin: 20rpx;
+}
+
+.explain {
+  background: #eee;
+  margin: 10rpx 0;
+  padding: 20rpx;
+  border-radius: 10rpx;
+  text-align: justify;
+}
+
+.timer {
+  padding:0 20rpx 20rpx 0;
+  text-align: right;
+  font-size: 30rpx;
+  color: #aaa;
+  border-bottom: 9rpx solid #ddd;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.none {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 60rpx 0;
+  color:#ffbdc9
+}
+.none image{
+  width:300rpx;
+}

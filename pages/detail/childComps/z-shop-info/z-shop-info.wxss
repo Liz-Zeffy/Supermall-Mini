@@ -2,11 +2,10 @@
 .shop {
   display: flex;
   align-items: center;
-  margin: 30rpx 20rpx;
+  margin: 30rpx 20rpx 10rpx;
 }
-.shop image {
+.shop > image {
   width: 100rpx;
-  height: 100rpx;
   border-radius: 50%;
   border: 1rpx solid #ddd;
 }
@@ -20,9 +19,61 @@
   display:flex;
   align-items: center;
   justify-content: space-between;
-  margin:30rpx 20rpx;
+  margin:10rpx 20rpx 30rpx;
 }
 
 .desc_info .sellInfo {
+  display: flex;
+  justify-content: space-between;
+  border-right: 2rpx #ddd solid;
+  width:50%;
+  padding-left:20rpx;
+  padding-right:50rpx;
+}
 
+.desc_info .sellInfo > view {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sellInfo .num {
+  font-size: 40rpx;
+}
+
+.sellInfo .name {
+  font-size: 28rpx;
+}
+
+.desc_info .scoreInfo {
+  padding-right:20rpx;
+  padding-left:50rpx;
+  width:50%;
+}
+
+.scoreItem {
+  display:flex;
+  justify-content: space-between;
+}
+.scoreItem > text{
+  font-size: 28rpx;
+  margin:4rpx 0
+}
+
+.scoreItem > text:nth-of-type(3){
+  color: #fff;
+}
+
+.come {
+  border-bottom: 9rpx solid #ddd;
+  text-align: center;
+  padding-bottom: 30rpx;
+}
+
+.come > text {
+  padding: 10rpx 100rpx;
+  background: #eee;
+  font-size: 28rpx;
+  border-radius: 10rpx;
+  color: #666;
 }

@@ -13,7 +13,8 @@ Page({
     topImages:'',
     baseInfo:{},
     shopInfo:{},
-    
+    commentInfo:{},
+    goodsInfo:{}
   },
 
   /**
@@ -36,11 +37,14 @@ Page({
             baseInfo.columns.push(lastcolumns);
 
       const shopInfo = new GoodShopInfo (data.shopInfo);
-            
+      const commentInfo = data.rate;
+      const goodsInfo = data.detailInfo;
       this.setData({
         topImages:data.itemInfo.topImages,
         baseInfo:baseInfo,
-        shopInfo:shopInfo
+        shopInfo:shopInfo,
+        commentInfo:commentInfo,
+        goodsInfo:goodsInfo
       });
     })
   }

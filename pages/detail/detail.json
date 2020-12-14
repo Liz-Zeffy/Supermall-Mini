@@ -3,6 +3,9 @@
   "usingComponents": {
     "z-banner":"../../components/z-banner/z-banner",
     "z-base-info":"./childComps/z-base-info/z-base-info",
-    "z-shop-info":"./childComps/z-shop-info/z-shop-info"
+    "z-shop-info":"./childComps/z-shop-info/z-shop-info",
+    "z-comment":"./childComps/z-comment/z-comment",
+    "z-goods-info":"./childComps/z-goods-info/z-goods-info"
   }
+
 }

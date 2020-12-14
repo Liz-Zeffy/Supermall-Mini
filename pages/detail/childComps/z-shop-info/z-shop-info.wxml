@@ -5,20 +5,20 @@
 </view>
 <view class="desc_info">
   <view class="sellInfo">
-    <view class="cgoods">
-      <text>{{shopInfo.cGoods}}</text>
-      <text>总销量</text>
-    </view>
     <view class="cSells">
-      <text>{{shopInfo.cSells}}</text>
-      <text>全部宝贝</text>
+      <text class="num">{{to_fixed.toFixed(shopInfo.cSells,1)}}万</text>
+      <text class="name">总销量</text>
+    </view>
+    <view class="cGoods">
+      <text class="num">{{shopInfo.cGoods}}件</text>
+      <text class="name">全部宝贝</text>
     </view>
   </view>
   <view class="scoreInfo">
-    <block wx:for="{{shopInfo.score}}">
+    <block wx:for="{{shopInfo.score}}" wx:key="item">
       <view class="scoreItem">
         <text>{{item.name}}</text>
-        <text>{{item.score}}</text>
+        <text style="color:{{item.isBetter ? 'green' : 'red'}}">{{to_fixed.toFixed2(item.score,2)}}</text>
         <text style="background:{{item.isBetter ? 'green' : 'red'}}">{{item.isBetter ? "高" : "低"}}</text>
       </view>
     </block>
@@ -27,3 +27,19 @@
 <view class="come">
   <text>进店逛逛</text>
 </view>
+
+
+<wxs module="to_fixed">
+  function toFixed(e,i){
+    return (e / 10000).toFixed(i);
+  }
+
+  function toFixed2(e,i){
+    return e.toFixed(i);
+  }
+
+  module.exports = {
+    toFixed : toFixed,
+    toFixed2 : toFixed2
+  }
+</wxs>
