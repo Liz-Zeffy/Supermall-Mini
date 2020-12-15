@@ -5,7 +5,7 @@
   bottom:10rpx;
 }
 
-.back-top image {
+.img {
   width:100rpx;
   height:100rpx;
   opacity: 0.85;

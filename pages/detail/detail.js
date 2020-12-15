@@ -1,6 +1,10 @@
+
 import {getDetail,
         GoodBaseInfo,
-        GoodShopInfo} from "../../network/detail"
+        GoodShopInfo,
+        getRecommend} from "../../network/detail"
+
+const TOP_DISTENCE = 1000
 
 // pages/detail/detail.js
 Page({
@@ -14,7 +18,10 @@ Page({
     baseInfo:{},
     shopInfo:{},
     commentInfo:{},
-    goodsInfo:{}
+    goodsInfo:{},
+    parameterInfo:{},
+    recommend:[],
+    showBackTop:false,
   },
 
   /**
@@ -22,14 +29,14 @@ Page({
    */
   onLoad: function (options) {
     this.data.iid = options.iid;
-    this._getDetail()
-  
+    this._getDetail();
+    this._getRecommend()
   },
 
   _getDetail(){
     getDetail(this.data.iid).then (res => {
       const data = res.data.result;
-      console.log(data);
+      // console.log(data);
   
       const baseInfo = new GoodBaseInfo (data.columns,data.itemInfo,data.shopInfo);
             const lastcolumns = baseInfo.services.pop().name;     
@@ -39,16 +46,37 @@ Page({
       const shopInfo = new GoodShopInfo (data.shopInfo);
       const commentInfo = data.rate;
       const goodsInfo = data.detailInfo;
+      const parameterInfo = data.itemParams;
       this.setData({
         topImages:data.itemInfo.topImages,
         baseInfo:baseInfo,
         shopInfo:shopInfo,
         commentInfo:commentInfo,
-        goodsInfo:goodsInfo
+        goodsInfo:goodsInfo,
+        parameterInfo:parameterInfo
       });
     })
+  },
+
+  _getRecommend(){
+    getRecommend().then(res => {
+      const recommends = res.data.data.list;
+      // console.log(recommends);
+      this.setData({
+        recommend:recommends
+      })
+    })
+  },
+
+  onPageScroll(option) {
+    const scrollTop = option.scrollTop;
+    const flag = scrollTop >= TOP_DISTENCE;
+    if(flag != this.data.showBackTop){
+      this.setData({
+        showBackTop:flag
+      })
+    }
   }
- 
 
 
 

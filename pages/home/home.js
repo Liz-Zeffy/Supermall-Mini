@@ -45,7 +45,6 @@ Page({
       const goods = this.data.goods;
       goods[type].page += 1;
       goods[type].list.push(...list);
-
       this.setData({
         goods
       })

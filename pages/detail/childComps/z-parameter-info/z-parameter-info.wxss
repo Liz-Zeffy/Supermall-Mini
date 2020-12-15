@@ -1,0 +1,52 @@
+/* pages/detail/childComps/z-parameter-info/z-parameter-info.wxss */
+.rule {
+  padding: 20rpx;
+  border-bottom: 9rpx solid #ddd;
+}
+
+.rule_title,.info_title {
+  border-bottom: 2rpx #eee solid;
+  padding-bottom: 20rpx;
+  font-size: 30rpx;
+
+}
+
+.ruleItem {
+  display: flex;
+  text-align: center;
+  font-size: 30rpx;
+  color: #666;
+  padding: 20rpx 0;
+  border-bottom: 2rpx #eee solid;
+}
+
+.title{
+  text-align: left;
+}
+
+.extraInfo {
+  color: #ff5777;
+  font-size: 26rpx;
+  padding-top: 40rpx;
+}
+
+.info {
+  padding:20rpx;
+  border-bottom: 9rpx solid #ddd;
+}
+
+.info .infoIntem {
+  display: flex;
+  font-size: 30rpx;
+  color: #666;
+  padding: 20rpx 0;
+  border-bottom: 2rpx #eee solid;
+  align-items: center;
+}
+.info_key {
+  width: 20%;
+}
+
+.info_value {
+  width: 80%;
+}

@@ -1,0 +1,21 @@
+<!--pages/detail/childComps/z-bottom-bar/z-bottom-bar.wxml-->
+<view class="bottom-bar">
+  <view class="left_slot">
+    <view class="left_item service">
+      <view class="icon service_icon"></view>
+      <view class="text">客服</view>
+    </view>
+    <view class="left_item shop">
+      <view class="icon shop_icon"></view>
+      <view class="text">店铺</view>
+    </view>
+    <view class="left_item collection">
+      <view class="icon collection_icon"></view>
+      <view class="text">收藏</view>
+    </view>
+  </view>
+  <view class="right_slot">
+    <view class="cart"></view>
+    <view class="buynow"></view>
+  </view>
+</view>

@@ -7,5 +7,6 @@ Component({
         scrollTop:0
       })
     }
-  }
+  },
+  externalClasses:['back-top']
 })

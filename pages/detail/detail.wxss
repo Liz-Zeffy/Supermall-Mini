@@ -4,5 +4,11 @@
   height:700rpx;
 }
 
+.newbacktop{
+  position:fixed;
+  right:14rpx;
+  bottom:100rpx;
+}
+
 
 

@@ -5,7 +5,11 @@
     "z-base-info":"./childComps/z-base-info/z-base-info",
     "z-shop-info":"./childComps/z-shop-info/z-shop-info",
     "z-comment":"./childComps/z-comment/z-comment",
-    "z-goods-info":"./childComps/z-goods-info/z-goods-info"
+    "z-goods-info":"./childComps/z-goods-info/z-goods-info",
+    "z-parameter-info":"./childComps/z-parameter-info/z-parameter-info",
+    "z-goods":"../../components/z-goods/z-goods",
+    "z-bottom-bar":"./childComps/z-bottom-bar/z-bottom-bar",
+    "z-back-top":"../../components/z-back-top/z-back-top"
   }
 
 }

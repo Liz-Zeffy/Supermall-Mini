@@ -43,12 +43,19 @@
 
 .desc_info {
   margin:0 20rpx;
-  border:1px red solid ;
+  border-bottom: 9rpx solid #ddd;
 }
 
+.desc_info .title {
+  margin:20rpx 0;
+  font-size: 30rpx;
+
+}
 .imgs{
   width:100%;
   margin-right: 20rpx;
+  
+
 }
 
 .imgs_info{

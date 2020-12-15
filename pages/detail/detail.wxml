@@ -2,5 +2,9 @@
 <z-banner class="d-swiper" list="{{topImages}}"/>
 <z-base-info baseInfo="{{baseInfo}}"/>
 <z-shop-info shopInfo="{{shopInfo}}"/>
-<z-comment commentInfo="{{commentInfo}}"/>
+<z-comment commentInfo="{{commentInfo}}"/> 
 <z-goods-info goodsInfo="{{goodsInfo}}" />
+<z-parameter-info parameterInfo="{{parameterInfo}}"/>
+<z-goods goodslist="{{recommend}}"/>
+<z-bottom-bar />
+<z-back-top wx:if="{{showBackTop}}" back-top="newbacktop"/>

@@ -1,0 +1,43 @@
+/* pages/detail/childComps/z-bottom-bar/z-bottom-bar.wxss */
+.bottom-bar {
+  position: fixed;
+  left:0;
+  right:0;
+  bottom:0;
+  width:100vw;
+  height:98rpx;
+  border:1rpx gold solid;
+  background:#fff;
+  display: flex;
+}
+
+.left_slot,.right_slot {
+  display:flex;
+  height:100%;
+  width:50%;
+}
+.left_item {
+  flex: auto;
+  border: 1rpx red solid;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.left_item .icon {
+  height: 50%;
+  background:url('../../../../assets/img/detail/detail_bottom.png') 30px;
+}
+
+.left_item .text {
+  height: 50%;
+}
+
+.cart {
+  flex:auto;
+  background:#ffe817;
+}
+
+.buynow {
+  flex:auto;
+  background:#ff6699;
+}

@@ -5,4 +5,4 @@
 <z-tabcontrol id="tabcontrol" title="{{title}}" bind:titleclick="titleClick" class="{{isTabFixed ? 'fixed' : ''}}"/>
 <z-tabcontrol title="{{title}}" wx:if="{{isTabFixed}}"/>
 <z-goods goodslist="{{goods[currentType].list}}"/>
-<z-back-top wx:if="{{showBackTop}}"/>
+<z-back-top wx:if="{{showBackTop}}" back-top="newbacktop"/>

@@ -14,3 +14,10 @@ z-banner, z-feature {
   z-index:100;
 }
 
+.newbacktop{
+  position:fixed;
+  right:14rpx;
+  bottom:10rpx;
+}
+
+

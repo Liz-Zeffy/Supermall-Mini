@@ -1,0 +1,23 @@
+<!--pages/detail/childComps/z-parameter-info/z-parameter-info.wxml-->
+<view class="parameter">
+  <view class="rule">
+    <view class="rule_title"><text>{{parameterInfo.rule.key}}</text></view>
+    <block wx:for="{{parameterInfo.rule.tables[0]}}" wx:for-item="itemy" wx:key="itemy">
+      <view class="ruleItem">
+        <block wx:for="{{itemy}}" wx:for-item="itemx" wx:for-index="indexx" wx:key="itemx">  
+            <text class="ruleInfo {{indexx == 0 ? 'title' : ''}}" style="width:{{100/itemy.length}}%">{{itemx}}</text>
+        </block>
+      </view>
+    </block>
+    <view class="extraInfo"><text>{{parameterInfo.rule.disclaimer}}</text></view>
+  </view>
+  <view class="info">
+    <view class="info_title"><text>{{parameterInfo.info.key}}</text></view>
+    <block wx:for="{{parameterInfo.info.set}}" wx:key="item">
+      <view class="infoIntem">
+        <text class="info_key">{{item.key}}</text>
+        <text class="info_value">{{item.value}}</text>
+      </view>
+    </block>
+  </view>
+</view>

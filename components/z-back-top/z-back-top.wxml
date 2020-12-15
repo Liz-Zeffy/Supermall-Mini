@@ -1,5 +1,5 @@
 <!--components/z-back-top/z-back-top.wxml-->
 <view class="back-top">
-  <image src="/assets/images/common/top.png" alt="" bind:tap="backTop"/>
+  <image class="img" src="/assets/images/common/top.png" alt="" bind:tap="backTop"/>
 </view>
 
