@@ -2,20 +2,20 @@
 <view class="bottom-bar">
   <view class="left_slot">
     <view class="left_item service">
-      <view class="icon service_icon"></view>
+      <image src="/assets/images/detail/service.png" class="icon" />
       <view class="text">客服</view>
     </view>
     <view class="left_item shop">
-      <view class="icon shop_icon"></view>
+      <image src="/assets/images/detail/shop.png" class="icon" />
       <view class="text">店铺</view>
     </view>
     <view class="left_item collection">
-      <view class="icon collection_icon"></view>
+      <image src="/assets/images/detail/collect.png" class="icon"/>
       <view class="text">收藏</view>
     </view>
   </view>
   <view class="right_slot">
-    <view class="cart"></view>
-    <view class="buynow"></view>
+    <view class="addToCart" bind:tap="cartClick">加入购物车</view>
+    <view class="buyNow">立即购买</view>
   </view>
 </view>

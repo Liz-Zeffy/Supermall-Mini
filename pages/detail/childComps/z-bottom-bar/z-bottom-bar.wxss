@@ -6,9 +6,9 @@
   bottom:0;
   width:100vw;
   height:98rpx;
-  border:1rpx gold solid;
   background:#fff;
   display: flex;
+  box-shadow: 0 -1px 3px rgba(20,20,20,.2);
 }
 
 .left_slot,.right_slot {
@@ -18,26 +18,30 @@
 }
 .left_item {
   flex: auto;
-  border: 1rpx red solid;
   display: flex;
   flex-direction: column;
   text-align: center;
+  font-size: 26rpx;
 }
 .left_item .icon {
-  height: 50%;
-  background:url('../../../../assets/img/detail/detail_bottom.png') 30px;
+  width: 44rpx;
+  height:44rpx;
+  margin:10rpx auto 2rpx;
 }
 
-.left_item .text {
-  height: 50%;
-}
-
-.cart {
+.addToCart {
   flex:auto;
   background:#ffe817;
+  line-height: 98rpx;
+  text-align: center;
+  font-size: 30rpx;
 }
 
-.buynow {
+.buyNow {
   flex:auto;
   background:#ff6699;
+  line-height: 98rpx;
+  text-align: center;
+  color: #fff;
+  font-size: 30rpx
 }
