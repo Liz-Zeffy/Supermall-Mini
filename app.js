@@ -1,3 +1,4 @@
+
 //app.js
 App({
   onLaunch: function () {
@@ -33,7 +34,24 @@ App({
       }
     })
   },
+
+  addToCart(obj){
+    return new Promise ((resolve,rejects) => {
+      const oldInfo = this.globalData.cartList.find((item) => item.iid === obj.iid);
+      if(oldInfo) {
+        oldInfo.count += (1);
+        resolve("当前数量加1")
+      }else{
+        obj.count = 1;
+        this.globalData.cartList.push(obj);
+        resolve("加入购物车成功")
+      }
+    })
+    
+  },
+
   globalData: {
-    userInfo: null
+    userInfo: null,
+    cartList:[]
   }
 })

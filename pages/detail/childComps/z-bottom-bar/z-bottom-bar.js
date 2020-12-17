@@ -19,7 +19,7 @@ Component({
    */
   methods: {
     cartClick(){
-      this.triggerEvent
+      this.triggerEvent('addToCart')
     }
   }
 })

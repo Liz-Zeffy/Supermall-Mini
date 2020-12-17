@@ -18,11 +18,14 @@ export function getRecommend() {
 export class GoodBaseInfo {
   constructor (columns,itemInfo,shopInfo){
     this.title = itemInfo.title,
+    this.desc = itemInfo.desc,
     this.price = itemInfo.price,
     this.oldPrice = itemInfo.highPrice,
     this.discount = [itemInfo.discountDesc, itemInfo.discountBgColor],
     this.columns = columns;
     this.services = shopInfo.services
+
+    this.realPrice = itemInfo.lowNowPrice
   }
 }
 

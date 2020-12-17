@@ -6,5 +6,5 @@
 <z-goods-info goodsInfo="{{goodsInfo}}" />
 <z-parameter-info parameterInfo="{{parameterInfo}}"/>
 <z-goods goodslist="{{recommend}}"/>
-<z-bottom-bar />
+<z-bottom-bar bind:addToCart="onAddCart"/>
 <z-back-top wx:if="{{showBackTop}}" back-top="newbacktop"/>

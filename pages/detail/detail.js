@@ -5,7 +5,7 @@ import {getDetail,
         getRecommend} from "../../network/detail"
 
 const TOP_DISTENCE = 1000
-
+const app = getApp();
 // pages/detail/detail.js
 Page({
 
@@ -36,7 +36,7 @@ Page({
   _getDetail(){
     getDetail(this.data.iid).then (res => {
       const data = res.data.result;
-      // console.log(data);
+      console.log(data);
   
       const baseInfo = new GoodBaseInfo (data.columns,data.itemInfo,data.shopInfo);
             const lastcolumns = baseInfo.services.pop().name;     
@@ -76,8 +76,23 @@ Page({
         showBackTop:flag
       })
     }
+  },
+
+  onAddCart(){
+    const obj = {};
+    obj.iid = this.data.iid;
+    obj.imageURL = this.data.topImages[0];
+    obj.title = this.data.baseInfo.title;
+    obj.desc = this.data.baseInfo.desc;
+    obj.price = this.data.baseInfo.realPrice
+
+    app.addToCart(obj).then(res => {
+      wx.showToast({
+        title: res,
+        duration:800
+      })
+    })
+
   }
-
-
 
 })
