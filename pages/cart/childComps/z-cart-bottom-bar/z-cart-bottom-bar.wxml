@@ -1,0 +1,33 @@
+<!--pages/cart/childComps/cart-bottom-bar/cart-bottom-bar.wxml-->
+<view class="bottom">
+  <view class="check_box">
+    <icon class="allcheck_icon icon" 
+          type="success" 
+          size="18" 
+          style="border:1.5px solid {{selected ? '#ff5777' : '#ccc'}}"
+          color="{{selected ? '#ff8198' : '#ffffff'}}"
+          bind:tap="selectAllClick"/>
+    <view>全选</view>
+  </view>
+  <view class="tatalPrice">
+    合计为: {{to_fixed.toFixed2(price,2)}}
+  </view>
+  <view class="calculate">
+    去结算({{counter}})
+  </view>
+</view>
+
+<wxs module="to_fixed">
+  function toFixed(e,i){
+    return (e / 10000).toFixed(i);
+  }
+
+  function toFixed2(e,i){
+    return e.toFixed(i);
+  }
+
+  module.exports = {
+    toFixed : toFixed,
+    toFixed2 : toFixed2
+  }
+</wxs>

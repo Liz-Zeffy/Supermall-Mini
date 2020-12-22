@@ -1,4 +1,3 @@
-
 import {getDetail,
         GoodBaseInfo,
         GoodShopInfo,

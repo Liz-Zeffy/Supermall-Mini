@@ -1,75 +1,8 @@
 /* pages/cart/cart.wxss */
 .cart {
-
-}
-.product {
-  height: 280rpx;
-  display: flex;
-  border: 1px gold solid;
-  align-items: center;
-  padding: 20rpx;
-}
-.icon {
-  border: 1.5px #ddd solid;
-  border-radius: 50%;
-}
-.check_icon {
-
+  padding-bottom: 80rpx;
 }
 
-.leftItem {
-  border: 1px red solid;
-  display: flex;
-}
-.img {
-  width: 160rpx;
-  border-radius: 5px;
-}
 
-.rightItem {
-  min-width: 0;
-}
 
-.title {
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-}
-.desc {
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-}
-
-.info {
-
-}
-.price {
-
-}
-
-.count {
-
-}
-.sub , .add {
-
-}
-
-.count_info {
-
-}
-
-.bottom {
-
-}
-
-.allcheck_icon{
-
-}
-.tatalPrice {
-
-}
-.calculate {
-
-}
 

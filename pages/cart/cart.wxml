@@ -1,38 +1,16 @@
 <!--pages/cart/cart.wxml-->
 <view class="cart">
   <block wx:for="{{cartList}}" wx:key="item">
-    <view class="product">
-      <icon class="check_icon icon" type="success" size="18" color="#ffffff"/>
-      <view class="leftItem">
-        <image class="img" src="{{item.imageURL}}" alt="" mode="widthFix" />
-      </view>
-      <view class="rightItem">
-        <view class="title">{{item.title}}</view>
-        <view class="desc">{{item.desc}}</view>
-        <view class="info">
-          <text class="price">{{item.price}}</text>
-          <view class="count">
-            <button class="sub" size="mini">-</button>
-            <text class="count_info">{{item.count}}</text>
-            <button class="add" size="mini">+</button>
-          </view>
-        </view>
-      </view>
-    </view>
+    <z-cart-list-item goods="{{item}}" 
+                      bind:subClick="subClick"
+                      bind:addClick="addClick"
+                      bind:checkClick="checkClick"/>
   </block>
 </view>
+<z-cart-bottom-bar selected="{{isSelectAll}}"
+                   price="{{totalPrice}}"
+                   counter="{{totalCounter}}"
+                   bind:selectAllClick="selectAllClick"
+                   />
 
 
-
-<view class="bottom">
-  <view class="check_box">
-    <icon class="allcheck_icon icon" type="success" size="18"/>
-    <view>全选</view>
-  </view>
-  <view class="tatalPrice">
-    合计为
-  </view>
-  <view class="calculate">
-    去结算
-  </view>
-</view>

@@ -1,0 +1,25 @@
+<!--pages/cart/childComps/cart-list-item.wxml-->
+<view class="product">
+      <icon class="check_icon icon" type="success" 
+                                    size="18" 
+                                    style="border:1.5px solid {{goods.checked ? '#ff5777' : '#ccc'}}"
+                                    color="{{goods.checked ? '#ff8198' : '#ffffff'}}"
+                                    bind:tap="{{goods.count == 0 ? '' : 'checkClick'}}"
+                                    data-item="{{goods}}"
+                                    data-index="{{index}}"/>
+      <view class="leftItem">
+        <image class="img" src="{{goods.imageURL}}" alt="" mode="widthFix" />
+      </view>
+      <view class="rightItem">
+        <view class="title">{{goods.title}}</view>
+        <view class="desc">{{goods.desc}}</view>
+        <view class="info">
+          <text class="price">￥{{goods.price}}</text>
+          <view class="count">
+            <button class="sub" size="mini" bind:tap="subClick" data-item="{{goods}}" disabled="{{goods.count == 1}}">-</button>
+            <text class="count_info">{{goods.count}}</text>
+            <button class="add" size="mini" bind:tap="addClick" data-item="{{goods}}">+</button>
+          </view>
+        </view>
+      </view> 
+</view>

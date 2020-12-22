@@ -1,0 +1,28 @@
+/* pages/cart/childComps/cart-bottom-bar/cart-bottom-bar.wxss */
+.bottom {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  height: 80rpx;
+  background: #eee;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  font-size:24rpx;
+}
+.check_box{
+  display: flex;
+  align-items: center;
+}
+.allcheck_icon{
+  margin: 0 10rpx 0 20rpx;
+  border: 1.5px #ccc solid;
+  border-radius: 50%;
+}
+
+.calculate {
+  padding: 0 50rpx;
+  background: #ff8198;
+  color: #fff;
+  line-height: 80rpx;
+}

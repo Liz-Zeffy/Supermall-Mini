@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "z-cart-list-item":"./childComps/z-cart-list-item/z-cart-list-item",
+    "z-cart-bottom-bar":"./childComps/z-cart-bottom-bar/z-cart-bottom-bar"
+  }
 }

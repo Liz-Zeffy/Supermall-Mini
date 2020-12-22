@@ -43,12 +43,22 @@ App({
         resolve("当前数量加1")
       }else{
         obj.count = 1;
+        obj.checked = false;
         this.globalData.cartList.push(obj);
         resolve("加入购物车成功")
+      }    
+
+      if(this.addCartCallback) {
+        this.addCartCallback()
       }
+
     })
+
+
     
   },
+
+
 
   globalData: {
     userInfo: null,
