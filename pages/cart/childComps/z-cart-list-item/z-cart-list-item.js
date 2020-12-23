@@ -8,6 +8,9 @@ Component({
     goods:{
       type:Object,
       value:{}
+    },
+    index:{
+      type:Number,
     }
   },
 
@@ -23,21 +26,32 @@ Component({
    */
   methods: {
     subClick(e){
-      const goods = e.currentTarget.dataset.item;
-      this.triggerEvent('subClick',{goods});
-      app.changeGoodsState()
+      const thisitem= e.currentTarget.dataset.item;
+      const index = e.currentTarget.dataset.index;
+      const goods = app.globalData.cartList.find(item => item.iid == thisitem.iid)
+      if(goods.count > 1){
+        goods.count--;
+       } 
+      console.log(app.globalData.cartList)
+      app.changeGoodsState(goods,index)
     },
     addClick(e){
-      const goods = e.currentTarget.dataset.item;
-      this.triggerEvent('addClick',{goods});
-      app.changeGoodsState()
+      const thisitem = e.currentTarget.dataset.item;
+      const index = e.currentTarget.dataset.index;
+      const goods = app.globalData.cartList.find(item => item.iid == thisitem.iid)
+      goods.count++;
+      console.log(app.globalData.cartList)
+      app.changeGoodsState(goods,index);
+
     },
 
     checkClick(e){
-      const goods = e.currentTarget.dataset.item;
+      const thisitem = e.currentTarget.dataset.item;
       const index = e.currentTarget.dataset.index;
-      this.triggerEvent('checkClick',{goods});
-      app.changeGoodsState(index, goods);
+      const goods = app.globalData.cartList.find(item => item.iid == thisitem.iid)
+      goods.checked = !goods.checked;
+
+      app.changeGoodsState(goods,index);
 
     }
   }

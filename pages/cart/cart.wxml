@@ -2,15 +2,13 @@
 <view class="cart">
   <block wx:for="{{cartList}}" wx:key="item">
     <z-cart-list-item goods="{{item}}" 
-                      bind:subClick="subClick"
-                      bind:addClick="addClick"
-                      bind:checkClick="checkClick"/>
+                      index="{{index}}"/>
   </block>
 </view>
 <z-cart-bottom-bar selected="{{isSelectAll}}"
                    price="{{totalPrice}}"
                    counter="{{totalCounter}}"
-                   bind:selectAllClick="selectAllClick"
+                   bind:selectAllClick="{{cartList[0] ? 'selectAllClick' : ''}}"
                    />
 
 
